@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background-color: grey;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.box {
+  height: 20%;
+  width: 90%;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  gap: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  input {
+    background-color: transparent;
+    border: black 1px solid;
+    &::placeholder {
+      color: black;
+    }
+  }
+  button{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
