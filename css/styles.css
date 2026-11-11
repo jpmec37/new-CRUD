@@ -13,9 +13,14 @@ body {
   flex-wrap: wrap;
 }
 .box {
-  height: 20%;
+  height: fit-content;
+  min-height: 10%;
+  max-height: 50%;
   width: 90%;
+  padding: 5px;
+  border: 1px solid black;
   background-color: whitesmoke;
+  flex-direction: column;
   border-radius: 10px;
   gap: 5px;
   display: flex;
@@ -35,5 +40,17 @@ body {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+  }
+}
+#output{
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  height: 200px;
+  li{
+    background-color: antiquewhite;
+    list-style: none;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-bottom: 5px;
   }
 }

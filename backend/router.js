@@ -4,13 +4,13 @@ import { getBack } from './functions.js'
 
 routerP.get('/', async (req, res) => {
     const data = await getBack()
-res.json(data)   
+    res.json(data)
 })
-routerP.get('/:id', (req, res) =>{
-const id = Number(req.params.id)
-console.log(getBack(id))
- res.json(getBack(id))  
+routerP.get('/:id', async (req, res) => {
+    const id = Number(req.params.id)
+    const output = await getBack(id)
+    res.json(output)
 
 })
 
-export {routerP}
+export { routerP }
