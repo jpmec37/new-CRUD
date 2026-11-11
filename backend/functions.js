@@ -1,6 +1,18 @@
 import { supabase } from "./database/database.js"
+async function addBack(nome, preco) {
+    if(!nome || !preco){
+        return error
+    }
+    const {data, error} = await supabase
+    .from('products')
+    .insert({nome: nome, preco:Number(preco)})
+
+    if(error){
+        return error
+    }
+    return "Dado inserido com sucesso"
+}
 async function getBack(params) {
-    console.log(params)
     if (!params) {
         const { data, error } = await supabase
             .from('products')
@@ -20,4 +32,4 @@ async function getBack(params) {
         return data
     }
 }
-export { getBack }
+export { addBack, getBack }
